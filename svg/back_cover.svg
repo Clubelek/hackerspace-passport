@@ -3,7 +3,7 @@
 <svg width="696" height="996" version="1.1" xmlns="http://www.w3.org/2000/svg">
 	<title>Clubelek Hackerspace Passport - Front cover</title>
 
-	<g id='background' transform='scal(-1,1)'>
+	<g id='background' transform='translate(696,0)scale(-1,1)'>
 		<!-- Copy-pasted from Inkscape -->
 		<polygon id='bg1' fill='#fcd03d' points='348,0 696,0 696,196.6232 348,498'/>
 		<polygon id='bg2' fill='#ffac78' points='348,498 696,196.6232 696,799.3768'/>
