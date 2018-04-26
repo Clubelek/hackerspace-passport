@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="696" height="996" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<title>Clubelek Hackerspace Passport - Front cover</title>
+
+	<g id='background'>
+		<!-- Copy-pasted from Inkscape -->
+		<polygon id='bg1' fill='#fcd03d' points='348,0 696,0 696,196.6232 348,498'/>
+		<polygon id='bg2' fill='#ffac78' points='348,498 696,196.6232 696,799.3768'/>
+		<polygon id='bg3' fill='#ef4178' points='348,996 348,498 696,799.3768 696,996'/>
+		<polygon id='bg4' fill='#d150ac' points='348,996 348,498 0,799.3768 0,996'/>
+		<polygon id='bg5' fill='#1baec2' points='348,498 0,196.6232 0,799.3768'/>
+		<polygon id='bg6' fill='#c6e1d3' points='348,0 0,0 0,196.6232 348,498'/>
+	</g>
+	
+</svg>
