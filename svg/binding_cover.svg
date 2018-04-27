@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="40" height="1250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<title>Clubelek Hackerspace Passport - Front cover</title>
+
+	<g id='background'>
+		<rect x='0' y='0' width='40' height='243.488' fill='#c6e1d3'/>
+		<rect x='0' y='243.488' width='40' height='762.5632' fill='#1baec2'/>
+		<rect x='0' y='1006.0512' width='40' height='243.9488' fill='#d150ac'/>
+	</g>
+	
+</svg>
