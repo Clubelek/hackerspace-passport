@@ -11,6 +11,44 @@
 				"#1baec2",
 				"#c6e1d3"
 			];
+			var orients = [
+				{
+					x1 : "0%",
+					x2 : "50%",
+					y1 : "0%",
+					y2 : "0%"
+				},
+				{
+					x1 : "0%",
+					x2 : "0%",
+					y1 : "0%",
+					y2 : "50%"
+				},
+				{
+					x1 : "0%",
+					x2 : "25%",
+					y1 : "0%",
+					y2 : "25%"
+				},
+				{
+					x1 : "0%",
+					x2 : "25%",
+					y1 : "25%",
+					y2 : "0%"
+				},
+				{
+					x1 : "25%",
+					x2 : "75%",
+					y1 : "0%",
+					y2 : "20%"
+				},
+				{
+					x1 : "75%",
+					x2 : "25%",
+					y1 : "0%",
+					y2 : "20%"
+				}
+			];
 			var gradient = document.getElementById('grad1');
 			var svgNS = document.documentElement.namespaceURI;
 			
@@ -22,6 +60,11 @@
 			}
 			colors.push(colors[0]);
 			var stop;
+			var orient = orients[Math.floor(Math.random() * orients.length)];
+			gradient.setAttribute("x1", orient.x1);
+			gradient.setAttribute("x2", orient.x2);
+			gradient.setAttribute("y1", orient.y1);
+			gradient.setAttribute("y2", orient.y2);
 			for (var i = 0; i < colors.length; i++) {
 				stop = document.createElementNS(svgNS, "stop");
 				stop.setAttribute('offset', (100 * i / (colors.length - 1)).toString().substring(0,5) + "%");
