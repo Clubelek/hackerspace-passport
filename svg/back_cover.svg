@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="696" height="996" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="880" height="1250" version="1.1" xmlns="http://www.w3.org/2000/svg">
 	<title>Clubelek Hackerspace Passport - Front cover</title>
 
-	<g id='background' transform='translate(696,0)scale(-1,1)'>
+	<g id='background'>
 		<!-- Copy-pasted from Inkscape -->
-		<polygon id='bg1' fill='#fcd03d' points='348,0 696,0 696,196.6232 348,498'/>
-		<polygon id='bg2' fill='#ffac78' points='348,498 696,196.6232 696,799.3768'/>
-		<polygon id='bg3' fill='#ef4178' points='348,996 348,498 696,799.3768 696,996'/>
-		<polygon id='bg4' fill='#d150ac' points='348,996 348,498 0,799.3768 0,996'/>
-		<polygon id='bg5' fill='#1baec2' points='348,498 0,196.6232 0,799.3768'/>
-		<polygon id='bg6' fill='#c6e1d3' points='348,0 0,0 0,196.6232 348,498'/>
+		<polygon id='bg1' fill='#fcd03d' points='440,0 880,0 880,243.488 440,625'/>
+		<polygon id='bg2' fill='#ffac78' points='440,625 880,243.488 880,1006.0512'/>
+		<polygon id='bg3' fill='#ef4178' points='440,1250 440,625 880,1006.0512 880,1250'/>
+		<polygon id='bg4' fill='#d150ac' points='440,1250 440,625 0,1006.0512 0,1250'/>
+		<polygon id='bg5' fill='#1baec2' points='440,625 0,243.488 0,1006.0512'/>
+		<polygon id='bg6' fill='#c6e1d3' points='440,0 0,0 0,243.488 440,625'/>
 	</g>
 	
 </svg>
