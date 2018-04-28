@@ -3,7 +3,7 @@
 <svg width="1800" height="1250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<title>Clubelek Hackerspace Passport - Page background</title>
 	<defs id='defs'/>
-	<g id='background' stroke-width='5' fill='none'/>
+	<g id='background' fill='none'/>
 	<script type="application/javascript"><![CDATA[
 		var colors = [
 				"#fcd03d",
@@ -51,11 +51,19 @@
 				y2 : "20%"
 			}
 		];
+		var lines = [
+			'medium-wide-squashed',
+			'tiny-narrow-touch',
+			'small-over-eat',
+			'medium-narrow-squashed',
+			'small-touch-squashed'
+		];
 		
 		var svgNS = document.documentElement.namespaceURI;
 		var bg = document.getElementById('background');
 		var df = document.getElementById('defs');
 		
+		var lineWidth = 2;
 		var baseSize = {
 			x: 2.5,
 			y: 2.733,
@@ -103,22 +111,68 @@
 			return path;
 		}
 		
-		function createLine(lid, scale, voffset, hoffset) {
+		function createLine(lid, scale, voffset, hoffset, soffset = 0) {
 			var height = document.documentElement.getAttribute("height");
 			var offset = (scale * baseSize.w + voffset);
 			var iterations = Math.floor(height / offset);
 			var g = document.createElementNS(svgNS, "g")
 			g.setAttribute("id", lid);
+			g.setAttribute("stroke-width", lineWidth / scale);
 			var grads = [];
 			for (var i = -1; i <= iterations; i++) {
 				grads.push(createGradient(lid + "-g" + (i+1)));
-				g.appendChild(createShape(lid + "-p" + (i+1), lid + "-g" + (i+1), scale, offset * i, hoffset));
+				g.appendChild(createShape(lid + "-p" + (i+1), lid + "-g" + (i+1), scale, offset * i + soffset, hoffset));
 			}
 			return {line:g, grads:grads};
 		}
 		
+		function createLineCfg(pattern, hoffset) {
+			pattern = pattern.split('-');
+			var scale;
+			var voffset;
+			var soffset;
+			var hplus;
+			scale = {
+				tiny: 0.1 + 0.05 * Math.random(),
+				small: 0.3 + 0.1 * Math.random(),
+				medium: 0.4 + 0.2 * Math.random(),
+				large: 0.7 + 0.2 * Math.random(),
+				huge: 1 + 0.3 * Math.random()
+			}[pattern[0]];
+			voffset = scale * {
+				squashed: -(baseSize.w * (1/4) + baseSize.w * (1/4) * Math.random()),
+				over: -(baseSize.w * (1/8) + baseSize.w * (1/8) * Math.random()),
+				touch: baseSize.w * (1/8) * Math.random(),
+				narrow: baseSize.w * (1/8) + baseSize.w * (1/8) * Math.random(),
+				wide: baseSize.w * (1/4) + baseSize.w * (1/4) * Math.random()
+			}[pattern[1]];
+			soffset = (baseSize.w * scale + voffset) * Math.random();
+			hplus = scale * (baseSize.h + {
+				eat: -(baseSize.h * (1/2) + baseSize.h * (1/4) * (Math.random() - 0.5)),
+				squashed: -(baseSize.h * (1/4) + baseSize.h * (1/4) * Math.random()),
+				over: -(baseSize.h * (1/8) + baseSize.h * (1/8) * Math.random()),
+				touch: baseSize.h * (1/8) * Math.random(),
+				narrow: baseSize.h * (1/8) + baseSize.h * (1/8) * Math.random(),
+				wide: baseSize.h * (1/4) + baseSize.h * (1/4) * Math.random()
+			}[pattern[2]]);
+			return {line:{scale:scale, voffset:voffset, hoffset:hoffset, soffset:soffset}, hnext:hoffset+hplus};
+		}
+		
 		document.addEventListener("DOMContentLoaded", function() {
-			
+			var covered = - Math.random() * baseSize.h * 0.5;
+			var width = document.documentElement.getAttribute("width");
+			var i = 0;
+			var l, c;
+			while (covered <= width) {
+				c = createLineCfg(lines[i % lines.length], covered);
+				l = createLine('l' + i, c.line.scale, c.line.voffset, c.line.hoffset, c.line.soffset);
+				for (var j = 0; j < l.grads.length; j++) {
+					df.appendChild(l.grads[j]);
+				}
+				bg.appendChild(l.line);
+				covered = c.hnext;
+				i += 1;
+			}
 		});
 	]]></script>
 </svg>
