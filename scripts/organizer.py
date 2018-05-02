@@ -39,11 +39,17 @@ def makedeps(pagelist):
 		result.append('$(PDFDIR)/' + lst[left]['type'] + '_' + ('n' if left is None else str(left)) + '_' + ('n' if right is None else str(right)) + '.pdf')
 	return result
 
+def touch(f):
+	with open(f, 'a'):
+		os.utime(f, None)
+
 if __name__ == "__main__":
 	pagedir = sys.argv[1]
 	mode = sys.argv[2].split('.')[0]
 	lst = listfiles(pagedir, mode)
 	types = {d['type'] for d in lst}
+	if mode not in types:
+		touch('%s.mk' % mode)
 	for t in types:
 		with open('%s.mk' % t, 'w', encoding='utf8') as f:
 			f.write('$(PDFDIR)/%s.pdf' % t)
@@ -51,3 +57,4 @@ if __name__ == "__main__":
 			f.write(' '.join(makedeps(d for d in lst if d['type'] == t)))
 			f.write('\n')
 			f.write(BUILD_RULE)
+	
