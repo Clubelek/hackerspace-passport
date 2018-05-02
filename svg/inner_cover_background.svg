@@ -58,11 +58,11 @@
 			}
 		];
 		var lines = [
-			'medium-wide-squashed',
-			'tiny-narrow-touch',
-			'small-over-eat',
-			'medium-narrow-squashed',
-			'small-touch-squashed'
+			'medium-wide-squashed-skewed',
+			'tiny-narrow-touch-dislodged',
+			'small-over-eat-skewed',
+			'medium-narrow-squashed-askew',
+			'small-touch-squashed-askew'
 		];
 		
 		var svgNS = document.documentElement.namespaceURI;
@@ -117,7 +117,7 @@
 			return path;
 		}
 		
-		function createLine(lid, scale, voffset, hoffset, soffset = 0) {
+		function createLine(lid, scale, voffset, hoffset, soffset = 0, skew = 0) {
 			var height = document.documentElement.getAttribute("height");
 			var offset = (scale * baseSize.w + voffset);
 			var iterations = Math.floor(height / offset);
@@ -127,7 +127,7 @@
 			var grads = [];
 			for (var i = -1; i <= iterations; i++) {
 				grads.push(createGradient(lid + "-g" + (i+1)));
-				g.appendChild(createShape(lid + "-p" + (i+1), lid + "-g" + (i+1), scale, offset * i + soffset, hoffset));
+				g.appendChild(createShape(lid + "-p" + (i+1), lid + "-g" + (i+1), scale, offset * i + soffset, hoffset + skew * ((i % 2) *2 - 1)));
 			}
 			return {line:g, grads:grads};
 		}
@@ -137,6 +137,7 @@
 			var scale;
 			var voffset;
 			var soffset;
+			var skew;
 			var hplus;
 			scale = {
 				tiny: 0.1 + 0.05 * Math.random(),
@@ -161,7 +162,13 @@
 				narrow: baseSize.h * (1/8) + baseSize.h * (1/8) * Math.random(),
 				wide: baseSize.h * (1/4) + baseSize.h * (1/4) * Math.random()
 			}[pattern[2]]);
-			return {line:{scale:scale, voffset:voffset, hoffset:hoffset, soffset:soffset}, hnext:hoffset+hplus};
+			skew = scale * {
+				straight: baseSize.h * (1/8) * Math.random(),
+				askew: baseSize.h * (1/4) * Math.random(),
+				skewed: baseSize.h * (1/2) * Math.random(),
+				dislodged: baseSize.h * (Math.random() * 0.5 + 0.5)
+			}[pattern[3]] * (Math.floor(Math.random() * 2) * 2 - 1);
+			return {line:{scale:scale, voffset:voffset, hoffset:hoffset, soffset:soffset, skew:skew}, hnext:hoffset+hplus};
 		}
 		
 		document.addEventListener("DOMContentLoaded", function() {
@@ -173,7 +180,7 @@
 			document.getElementById("biglogo").setAttribute("stroke", "url(#biggrad)");
 			while (covered <= width) {
 				c = createLineCfg(lines[i % lines.length], covered);
-				l = createLine('l' + i, c.line.scale, c.line.voffset, c.line.hoffset, c.line.soffset);
+				l = createLine('l' + i, c.line.scale, c.line.voffset, c.line.hoffset, c.line.soffset, c.line.skew);
 				for (var j = 0; j < l.grads.length; j++) {
 					df.appendChild(l.grads[j]);
 				}
