@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="1800" height="1250" viewBox="0 0 1800 1250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="2100" height="1550" viewBox="0 0 2100 1550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<title>Clubelek Hackerspace Passport - Cover</title>
-	<image x="920" y="0" width="880" height="1250" xlink:href="front_cover.svg" />
-	<image x="880" y="0" width="40" height="1250" xlink:href="binding_cover.svg" />
-	<image x="0" y="0" width="880" height="1250" xlink:href="back_cover.svg" />
+	<image x="0" y="0" width="2100" height="1550" xlink:href="cropmarks_cover.svg" />
+	<image x="1070" y="150" width="880" height="1250" xlink:href="front_cover.svg" />
+	<image x="1030" y="150" width="40" height="1250" xlink:href="binding_cover.svg" />
+	<image x="150" y="150" width="880" height="1250" xlink:href="back_cover.svg" />
 </svg>
