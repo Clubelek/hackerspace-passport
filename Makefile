@@ -2,12 +2,14 @@
 
 FFX=firefox -headless
 PY=python3
+IMM=convert
 
 SVGDIR=svg
 PNGDIR=png
 HTMDIR=html
 SCRDIR=scripts
 TMPDIR=templates
+PDFDIR=pdf
 
 $(PNGDIR)/%.png : $(HTMDIR)/%.html
 	@test -d $$(dirname $@) || mkdir -p $$(dirname $@)
@@ -16,6 +18,10 @@ $(PNGDIR)/%.png : $(HTMDIR)/%.html
 $(PNGDIR)/%.png : $(SVGDIR)/%.svg
 	@test -d $$(dirname $@) || mkdir -p $$(dirname $@)
 	$(FFX) -screenshot $@ file://$$(realpath $<)
+
+$(PDFDIR)/%.pdf : $(PNGDIR)/%.png
+	@test -d $$(dirname $@) || mkdir -p $$(dirname $@)
+	$(IMM) -density 254 -units pixelsperinch $< $@
 
 $(PNGDIR)/full_cover.png : $(SVGDIR)/full_cover.svg $(SVGDIR)/front_cover.svg $(SVGDIR)/back_cover.svg $(SVGDIR)/binding_cover.svg $(SVGDIR)/cropmarks_cover.svg
 
