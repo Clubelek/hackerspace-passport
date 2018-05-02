@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Clubelek Hackerspace Passport - Cover pages {left[number]} and {right[number]}</title>
+		<style type='text/css'>
+			html {{
+				width: 220mm;
+				height: 165mm;
+			}}
+			.cropmarks {{
+				position:absolute;
+				top: 5mm;
+				left: 5mm;
+				height: 155mm;
+			}}
+			.over {{
+				position:absolute;
+				top: 18mm;
+				left: 18mm;
+				height: 129mm;
+			}}
+			.page-both, .page-left {{
+				position:absolute;
+				top: 20mm;
+				left: 20mm;
+				height: 125mm;
+			}}
+			.page-right {{
+				position:absolute;
+				top: 20mm;
+				left: 112mm;
+				height: 125mm;
+			}}
+		</style>
+	</head>
+	<body>
+		<embed type='image/svg+xml' src='{cropmarks[path]}' class="cropmarks"/>
+		<embed type='image/svg+xml' src='{bg[path]}' class="over"/>
+		<embed type='image/svg+xml' src='{left[path]}' class="page-left"/>
+		<embed type='image/svg+xml' src='{right[path]}' class="page-right"/>
+	</body>
+</html>
