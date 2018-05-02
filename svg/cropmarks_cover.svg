@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="2100" height="1550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="2100" height="1550" viewBox="0 0 2100 1550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<title>Clubelek Hackerspace Passport - Cover Cropmarks</title>
 	<g id='cropmarks' stroke-width='3' stroke='#000000'>
 		<line x1='0' y1='150' x2='100' y2='150'/>
