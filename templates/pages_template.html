@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Clubelek Hackerspace Passport - Pages {left.number} and {right.number}</title>
+		<title>Clubelek Hackerspace Passport - Pages {left[number]} and {right[number]}</title>
 		<style type='text/css'>
-			html {
+			html {{
 				width: 2200px;
 				height: 1650px;
-			}
-			.cropmarks {
+			}}
+			.cropmarks {{
 				position:absolute;
 				top: 50px;
 				left: 50px;
 				height: 1550px;
-			}
-			.over {
+			}}
+			.over {{
 				position:absolute;
 				top: 180px;
 				left: 180px;
 				height: 1290px;
-			}
-			.page-both, .page-left {
+			}}
+			.page-both, .page-left {{
 				position:absolute;
 				top: 200px;
 				left: 200px;
 				height: 1250px;
-			}
-			.page-right {
+			}}
+			.page-right {{
 				position:absolute;
 				top: 200px;
 				left: 1080px;
 				height: 1250px;
-			}
+			}}
 		</style>
 	</head>
 	<body>
-		<embed type='image/svg+xml' src='{cropmarks.path}' class="cropmarks"/>
-		<embed type='image/svg+xml' src='{bg.path}' class="over"/>
-		<embed type='image/svg+xml' src='{left.path}' class="page-left"/>
-		<embed type='image/svg+xml' src='{right.path}' class="page-right"/>
+		<embed type='image/svg+xml' src='{cropmarks[path]}' class="cropmarks"/>
+		<embed type='image/svg+xml' src='{bg[path]}' class="over"/>
+		<embed type='image/svg+xml' src='{left[path]}' class="page-left"/>
+		<embed type='image/svg+xml' src='{right[path]}' class="page-right"/>
 	</body>
 </html>

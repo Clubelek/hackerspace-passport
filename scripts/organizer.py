@@ -12,6 +12,8 @@ DEFAULT_FILES = {
 
 BUILD_RULE = "\t$(PPU) $^ $@\n"
 
+DEFAULT_DEPFILE = "$(PDFDIR)/{0}.pdf : $(PDFDIR)/{0}_n_n.pdf\n" + BUILD_RULE
+
 def listfiles(path, type):
 	lst = (f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f)) and re.match(r'^[cp]_[0-9]+\.svg$', f))
 	result = []
@@ -39,17 +41,14 @@ def makedeps(pagelist):
 		result.append('$(PDFDIR)/' + lst[left]['type'] + '_' + ('n' if left is None else str(left)) + '_' + ('n' if right is None else str(right)) + '.pdf')
 	return result
 
-def touch(f):
-	with open(f, 'a'):
-		os.utime(f, None)
-
 if __name__ == "__main__":
 	pagedir = sys.argv[1]
 	mode = sys.argv[2].split('.')[0]
 	lst = listfiles(pagedir, mode)
 	types = {d['type'] for d in lst}
 	if mode not in types:
-		touch('%s.mk' % mode)
+		with open('%s.mk' % mode, 'w', encoding='utf8') as f:
+			f.write(DEFAULT_DEPFILE.format(mode))
 	for t in types:
 		with open('%s.mk' % t, 'w', encoding='utf8') as f:
 			f.write('$(PDFDIR)/%s.pdf' % t)
