@@ -88,8 +88,8 @@ to a real passport. My first source of inspiration was
 [the Wikipedia page for Passports](https://en.wikipedia.org/wiki/Passport) and
 [French Passports](https://en.wikipedia.org/wiki/French_passport).
 I also took some information (especially regarding the positions of elements
-on the ID page) from ICAO Doc 9303, the one that gives the full specification
-for international passports.
+on the ID page) from [ICAO Doc 9303](https://www.icao.int/publications/pages/publication.aspx?docnum=9303),
+the one that contains the full specification for international passports.
 
 First off, the size is the standard TD3 size (height of 125mm and width of 88mm).
 It is the same size as regular passports.
