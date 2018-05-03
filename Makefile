@@ -34,8 +34,8 @@ $(PNGDIR)/%.png : $(SVGDIR)/%.svg
 
 $(PNGDIR)/full_cover.png : $(SVGDIR)/full_cover.svg $(SVGDIR)/front_cover.svg $(SVGDIR)/back_cover.svg $(SVGDIR)/binding_cover.svg $(SVGDIR)/cropmarks_cover.svg
 
-pages.mk cover.mk : $(SCRDIR)/organizer.py
-	$(PY) $< svg/pages $@
+pages.mk cover.mk : $(SCRDIR)/organizer.py $(SVGDIR)/pages
+	$(PY) $^ $@
 
 .SECONDEXPANSION:
 $(HTMDIR)/pages_%.html : $(SCRDIR)/pager.py $(TMPDIR)/pages_template.html $(SVGDIR)/pages/p_$$(word 1,$$(subst _, ,$$*)).svg $(SVGDIR)/pages/p_$$(word 2,$$(subst _, ,$$*)).svg $(SVGDIR)/page_background.svg $(SVGDIR)/cropmarks_pages.svg
