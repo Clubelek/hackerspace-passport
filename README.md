@@ -29,7 +29,10 @@ and `DejaVu Serif` which are installed by default on most computers,
 and [`Monotype Corsiva`](/resources/MTCORSVA.TTF) and [`OCRB`](/resources/OCRB.otf)
 which are in the [`resources`](/resources) folder.
 
-Then open a shell, `git clone` this repo and run `make` in the cloned directory.
+Then open a terminal, `git clone` this repo and run `make` in the cloned directory.
+
+Your Git might be pissed off if you don't have [Git LFS](https://git-lfs.github.com/)
+installed, but you don't need it to get the files used by the build scripts.
 
 ### Step 2: Printing
 
