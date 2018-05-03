@@ -12,11 +12,13 @@ SCRDIR=scripts
 TMPDIR=templates
 PDFDIR=pdf
 
-$(PDFDIR)/passport.pdf : $(PDFDIR)/cover.pdf $(PDFDIR)/pages.pdf
-	$(PPU) $^ $@
+all: $(PDFDIR)/passport.pdf $(PDFDIR)/full_cover.pdf
 
 include cover.mk
 include pages.mk
+
+$(PDFDIR)/passport.pdf : $(PDFDIR)/cover.pdf $(PDFDIR)/pages.pdf
+	$(PPU) $^ $@
 
 $(PDFDIR)/%.pdf : $(PNGDIR)/%.png
 	@test -d $$(dirname $@) || mkdir -p $$(dirname $@)
