@@ -13,7 +13,7 @@
    version="1.1"
    id="svg2"
    sodipodi:docname="c_1.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -41,9 +41,9 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.53400704"
-     inkscape:cx="44.387496"
+     inkscape:cx="-297.3683"
      inkscape:cy="682.109"
-     inkscape:window-x="1592"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
@@ -103,22 +103,22 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'‘DragonForcE’';-inkscape-font-specification:'‘DragonForcE’';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     x="439.362"
+     x="439.83725"
      y="1010.3284"
      id="text3732"><tspan
        sodipodi:role="line"
        id="tspan3730"
-       x="439.362"
+       x="439.83725"
        y="1010.3284"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:1;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';text-align:center;text-anchor:middle">We, Clubelek of INSA Lyon,</tspan><tspan
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:1;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic';text-align:center;text-anchor:middle">We, Clubelek of INSA Lyon,</tspan><tspan
        sodipodi:role="line"
-       x="439.362"
+       x="439.83725"
        y="1060.3284"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:1;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';text-align:center;text-anchor:middle"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:1;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic';text-align:center;text-anchor:middle"
        id="tspan3734">solemnly ask you to welcome the bearer of this document</tspan><tspan
        sodipodi:role="line"
-       x="439.362"
+       x="439.83725"
        y="1110.3284"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:1;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';text-align:center;text-anchor:middle"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:1;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic';text-align:center;text-anchor:middle"
        id="tspan3736">and to treat him as one of yours</tspan></text>
 </svg>
