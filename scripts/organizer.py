@@ -24,7 +24,7 @@ def listfiles(path, type):
 			"type" : {
 				"c" : "cover",
 				"p" : "pages"
-			}[os.path.splitext(os.path.basename(f))[0].split('_')[0]]
+			}[os.path.basename(f).split('_')[0]]
 		}
 		result.append(r)
 	return result if type is 'both' else [f for f in result if f['type'] == type]
@@ -34,8 +34,8 @@ def makedeps(pagelist):
 	pagecount = len(lst)
 	result = []
 	for i in range(math.ceil(pagecount/2)):
-		left = None if i > pagecount else i
-		right = None if pagecount - (i+1) > pagecount else pagecount - (i+1)
+		left = None if i >= pagecount else i
+		right = None if pagecount - (i+1-(pagecount%2)) >= pagecount else pagecount - (i+1-(pagecount%2))
 		if left is not None and right is not None and lst[left]['type'] != lst[right]['type']:
 			raise ValueError("Pages %s and %s should be matched but have different type" % (lst[left]['path'], lst[right]['path']))
 		result.append('$(PDFDIR)/' + lst[left]['type'] + '_' + ('n' if left is None else str(lst[left]['number'])) + '_' + ('n' if right is None else str(lst[right]['number'])) + '.pdf')
