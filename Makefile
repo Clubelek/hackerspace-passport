@@ -57,3 +57,5 @@ $(HTMDIR)/pages_n_n.html : $(SCRDIR)/pager.py $(TMPDIR)/pages_template.html $(SV
 $(HTMDIR)/cover_n_n.html : $(SCRDIR)/pager.py $(TMPDIR)/cover_template.html $(SVGDIR)/pages/c_n.svg $(SVGDIR)/inner_cover_background.svg $(SVGDIR)/cropmarks_cover.svg
 	@test -d $$(dirname $@) || mkdir -p $$(dirname $@)
 	$(PY) $(SCRDIR)/pager.py $(TMPDIR)/cover_template.html $(SVGDIR)/pages/c_n.svg $(SVGDIR)/pages/c_n.svg $(SVGDIR)/inner_cover_background.svg $(SVGDIR)/cropmarks_cover.svg $(HTMDIR)/cover_n_n.html
+
+.INTERMEDIATE: $(PNGDIR)/full_cover.png $(HTMDIR)/pages_n_n.html $(HTMDIR)/cover_n_n.html
