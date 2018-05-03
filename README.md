@@ -76,3 +76,21 @@ The page background is inspired from the security background of passport pages,
 with its repeating patterns... except that here it's the Clubelek's logo.
 With randomized colors. I went through all the trouble to create randomized
 images just for you, you better like them.
+
+The quote on the first page is fitting for the theme of hackers and makers:
+"Everyone's got ideas. Often the same ones. What's important, is to know how to use them."
+That's precisely our what we do: we use good ideas, and turn them into things,
+using our knowledge, skills, and intuition.
+The makers are those who know how to use an idea.
+
+After the quote, we have a request for hospitality. That's something often found on passports,
+either that or a promise of protection. We can't do much in term of protection,
+and it's not very much in the spirit of hackerspaces anyway, so a request for hospitality will do.
+
+> *Placeholder for inner pages*
+
+The last page has legal disclaimers, both so we don't have too much trouble with the law
+(imitating an official document and all that), and to mimic the actual disclaimers
+at the end of a real passport. In a French passport, they say that the document
+is the property of the State of France, and that tempering is prohibited.
+But it wouldn't be a *hacker's* passport if one couldn't temper with it, right?
