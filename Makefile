@@ -11,13 +11,14 @@ HTMDIR=html
 SCRDIR=scripts
 TMPDIR=templates
 PDFDIR=pdf
+IDDIR=identities
 
-all: $(PDFDIR)/passport.pdf $(PDFDIR)/full_cover.pdf
+all: $(PDFDIR)/full_cover.pdf $(patsubst $(IDDIR)/%.json,$(PDFDIR)/passport_%.pdf,$(wildcard $(IDDIR)/*.json))
 
 include cover.mk
 include pages.mk
 
-$(PDFDIR)/passport.pdf : $(PDFDIR)/cover.pdf $(PDFDIR)/pages.pdf
+$(PDFDIR)/passport_%.pdf : $(PDFDIR)/cover.pdf $(PDFDIR)/pages_%.pdf
 	$(PPU) $^ $@
 
 $(PDFDIR)/%.pdf : $(PNGDIR)/%.png
@@ -34,10 +35,13 @@ $(PNGDIR)/%.png : $(SVGDIR)/%.svg
 
 $(PNGDIR)/full_cover.png : $(SVGDIR)/full_cover.svg $(SVGDIR)/front_cover.svg $(SVGDIR)/back_cover.svg $(SVGDIR)/binding_cover.svg $(SVGDIR)/cropmarks_cover.svg
 
-pages.mk cover.mk : $(SCRDIR)/organizer.py $(SVGDIR)/pages
+pages.mk cover.mk : $(SCRDIR)/organizer.py $(SVGDIR)/pages $(TMPDIR) $(IDDIR)
 	$(PY) $^ $@
 
 .SECONDEXPANSION:
+$(SVGDIR)/pages/p_%.svg : $(SCRDIR)/mkid.py $(IDDIR)/$$(word 1,$$(subst -, ,$$*)).json $(TMPDIR)/p_{fname}-$$(word 2,$$(subst -, ,$$*)).svg
+	$(PY) $^ $@
+
 $(HTMDIR)/pages_%.html : $(SCRDIR)/pager.py $(TMPDIR)/pages_template.html $(SVGDIR)/pages/p_$$(word 1,$$(subst _, ,$$*)).svg $(SVGDIR)/pages/p_$$(word 2,$$(subst _, ,$$*)).svg $(SVGDIR)/page_background.svg $(SVGDIR)/cropmarks_pages.svg
 	@test -d $$(dirname $@) || mkdir -p $$(dirname $@)
 	$(PY) $^ $@
