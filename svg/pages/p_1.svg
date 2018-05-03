@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="1250" viewBox="0 0 880 1250" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g id='mrz'>
+		<rect x='-20' y='-20' width='252' height='1290' fill='#ffffff'/>
+		<text x='0' y='0' font-size='43' font-family='OCRB' textLength='1140' fill='#000000' transform='translate(136,60)rotate(90)'>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+		<text x='0' y='0' font-size='43' font-family='OCRB' textLength='1140' fill='#000000' transform='translate(72.5,60)rotate(90)'>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+	</g>
+	<g id='picture'>
+		<rect x='240' y='10' width='470' height='370' fill='#ffffff'/>
+		<image x="0" y="0" width='350' height='450' transform='translate(700,20)rotate(90)' xlink:href="http://via.placeholder.com/350x450"/>
+	</g>
+	<g id='z1' transform='translate(860,20)rotate(90)'>
+		<text x='50' y='83' font-size='50' font-family='DejaVu Serif' font-weight='bold' textLength='300'>CLUBELEK</text>
+		<text x='50' y='120' font-size='30' font-family='DejaVu Sans'>Passeport / <tspan font-style='italic'>Passport</tspan></text>
+		<text x='450' y='83' font-size='20' font-family='DejaVu Serif'>Type / <tspan font-style='italic'>Type</tspan></text>
+		<text x='470' y='123' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>PH</text>
+		<text x='600' y='83' font-size='20' font-family='DejaVu Serif'>Pays / <tspan font-style='italic'>Country</tspan></text>
+		<text x='620' y='123' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>XXX</text>
+		<text x='800' y='83' font-size='20' font-family='DejaVu Serif'>N° de passeport / <tspan font-style='italic'>Passport Nr.</tspan></text>
+		<text x='820' y='123' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>12345ABCD</text>
+	</g>
+	<g id='z2' transform='translate(680,400)rotate(90)'>
+		<text x='0' y='0' font-size='20' font-family='DejaVu Serif'>Nom et titre complets / <tspan font-style='italic'>Full name and title</tspan></text>
+		<text x='20' y='35' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'></text>
+		<text x='0' y='95' font-size='20' font-family='DejaVu Serif'>Nom / <tspan font-style='italic'>Name</tspan></text>
+		<text x='20' y='130' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'></text>
+		<text x='500' y='95' font-size='20' font-family='DejaVu Serif'>Nationalité / <tspan font-style='italic'>Nationality</tspan></text>
+		<text x='520' y='130' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'></text>
+		<text x='0' y='190' font-size='20' font-family='DejaVu Serif'>Prénom(s) / <tspan font-style='italic'>First name(s)</tspan></text>
+		<text x='20' y='225' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'></text>
+		<text x='600' y='190' font-size='20' font-family='DejaVu Serif'>Genre / <tspan font-style='italic'>Gender</tspan></text>
+		<text x='620' y='225' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'></text>
+		<text x='0' y='285' font-size='20' font-family='DejaVu Serif'>Date de naissance / <tspan font-style='italic'>Date of birth</tspan></text>
+		<text x='20' y='320' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'></text>
+		<text x='400' y='285' font-size='20' font-family='DejaVu Serif'>Date d'émission / <tspan font-style='italic'>Date of issuance</tspan></text>
+		<text x='420' y='320' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'></text>
+		<text x='0' y='380' font-size='20' font-family='DejaVu Serif'>Autorité émettrice / <tspan font-style='italic'>Issuing authority</tspan></text>
+		<text x='20' y='415' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>BUREAU DU CLUBELEK / CLUBELEK ADMIN BOARD</text>
+	</g>
+</svg>
