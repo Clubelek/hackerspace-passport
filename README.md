@@ -41,8 +41,6 @@ installed, but you don't need it to get the files used by the build scripts.
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get update && sudo apt-get install git git-lfs
 git lfs install
-```
->```
 # Now we create the passport
 sudo apt-get install make python3 poppler-utils firefox imagemagick
 git clone https://git.heptacle.fr/clubelek-asso/hackerspace-passport.git
