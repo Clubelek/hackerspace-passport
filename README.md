@@ -35,19 +35,20 @@ Your Git might be pissed off if you don't have [Git LFS](https://git-lfs.github.
 installed, but you don't need it to get the files used by the build scripts.
 
 > All-in-one build script for Debianoïds:
->
->    # The following lines are only to install git-lfs, from https://github.com/git-lfs/git-lfs/blob/master/INSTALLING.md
->    # Don't run them if you already have it, or already have the fonts installed.
->    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
->    sudo apt-get update && sudo apt-get install git git-lfs
->    git lfs install
->    
->    # Now we create the passport
->    sudo apt-get install make python3 poppler-utils firefox imagemagick
->    git clone https://git.heptacle.fr/clubelek-asso/hackerspace-passport.git
->    cd hackerspace-passport
->    mkdir -p ~/.fonts && cp resources/MTCORSVA.TTF resources/OCRB.otf ~/.fonts && fc-cache -f -v
->    make
+>```bash
+# The following lines are only to install git-lfs, from https://github.com/git-lfs/git-lfs/blob/master/INSTALLING.md
+# Don't run them if you already have it, or already have the fonts installed.
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get update && sudo apt-get install git git-lfs
+git lfs install
+
+# Now we create the passport
+sudo apt-get install make python3 poppler-utils firefox imagemagick
+git clone https://git.heptacle.fr/clubelek-asso/hackerspace-passport.git
+cd hackerspace-passport
+mkdir -p ~/.fonts && cp resources/MTCORSVA.TTF resources/OCRB.otf ~/.fonts && fc-cache -f -v
+make
+```
 
 ### Step 2: Printing
 
