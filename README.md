@@ -24,8 +24,12 @@ You will need:
 As easy as a `make`.
 
 All you need is a Linux computer with `make`, `python3`, `poppler-utils`,
-`firefox` and `imagemagick` installed. Then open a shell, `git clone` this repo
-and run `make` in the cloned directory.
+`firefox` and `imagemagick` installed. You will also need the fonts `DejaVu Sans`
+and `DejaVu Serif` which are installed by default on most computers,
+and [`Monotype Corsiva`](/resources/MTCORSVA.TTF) and [`OCRB`](/resources/OCRB.otf)
+which are in the [`resources`](/resources) folder.
+
+Then open a shell, `git clone` this repo and run `make` in the cloned directory.
 
 ### Step 2: Printing
 
