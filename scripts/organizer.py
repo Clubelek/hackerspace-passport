@@ -12,7 +12,7 @@ DEFAULT_FILES = {
 
 BUILD_RULE = "\t$(PPU) $^ $@\n"
 
-DEFAULT_DEPFILE = "$(PDFDIR)/{0}.pdf : $(PDFDIR)/{0}_n_n.pdf\n" + BUILD_RULE
+DEFAULT_DEPFILE = "$(PDFDIR)/{0}.pdf : $(PDFDIR)/{0}_n_n.pdf\n" + BUILD_RULE + ".INTERMEDIATE : $(PDFDIR)/{0}.pdf $(PDFDIR)/{0}_n_n.pdf\n"
 
 def listfiles(path, type):
 	lst = (f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f)) and re.match(r'^[cp]_[0-9]+\.svg$', f))
@@ -51,9 +51,13 @@ if __name__ == "__main__":
 			f.write(DEFAULT_DEPFILE.format(mode))
 	for t in types:
 		with open('%s.mk' % t, 'w', encoding='utf8') as f:
+			d = makedeps(d for d in lst if d['type'] == t)
 			f.write('$(PDFDIR)/%s.pdf' % t)
 			f.write(' : ')
-			f.write(' '.join(makedeps(d for d in lst if d['type'] == t)))
+			f.write(' '.join(d))
 			f.write('\n')
 			f.write(BUILD_RULE)
+			f.write('.INTERMEDIATE : $(PDFDIR)/%s.pdf ' % t)
+			f.write(' '.join(d))
+			f.write('\n')
 	
