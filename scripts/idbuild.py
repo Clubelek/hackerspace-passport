@@ -1,9 +1,11 @@
 
 import PIL
 import io
+import re
 import base64
 import secrets
 import string
+import datetime
 
 BASIC_CHARS = string.digits + string.ascii_lowercase
 
@@ -143,7 +145,10 @@ def getimgdata(imgpath, maxheight = 450, maxwidth = 350):
 	size = (img.width * ratio, img.height * ratio)
 	filter = PIL.Image.LANCZOS #if ratio < 1 else PIL.Image.BICUBIC
 	data = io.BytesIO()
-	img.resize(size, filter).save(data, 'png', optimize = True)
+	if abs(ratio - 1) <= 0.01:
+		img.save(data, 'png', optimize = True)
+	else:
+		img.resize(size, filter).save(data, 'png', optimize = True)
 	uri = 'data:image/png;base64,'
 	return {
 		'uri' : uri + base64.b64encode(data.getValue()).decode('ascii'),
@@ -159,7 +164,7 @@ def buildMRZ(passport, person, namescheme = 'famfirst'):
 		'fam' : person['name'],
 		'full' : person['fullname'],
 		'fullcomma' : person['fullname'].replace(', ', '<<', 1),
-		'mrz' : person['mrzname'].replace('#', '<<', 1),
+		'mrz' : person.get('mrzname', '').replace('#', '<<', 1),
 	}.get(namescheme, person['name'] + '<<' + person['firstnames']))
 	number = passport['number'] and passport['number'].rjust(9, '<')[:9] or '<<<<<<<<<'
 	bdate = person['birthday-date'] and person['birthday-date'].strftime(MRZ_DATE_FORMAT) or '<<<<<<'
@@ -188,6 +193,32 @@ def buildpassport(number = None, issuedate = None, expiredate = None):
 		'number' : number
 	}
 
-
+def cliBuilder():
+	print("Identity File Builder for Clubelek Passport generation")
+	print("This program will guide you to create a personnalization file\nfor your Clubelek passport.\n")
+	print("You will have to type in a lot of stuff, and you better get it right")
+	print("because otherwise the program will crash and you'll have to start again.\n")
+	print("First: the passport number. It's a 9 characters numbers\nmade of letters and digits.")
+	number = input("Enter your desired passport number:  ").upper()
+	if number and not re.match("^[0-9A-Z]{9}$", number):
+		raise ValueError("Bad passport number")
+	print('\nNow your name.')
+	print("There are 3 elements in this category:")
+	print("\t- Your family name")
+	print("\t- Your first name(s)")
+	print("\t- Your full name and title(s) which include the 2 above")
+	name = input("Enter your family name:  ")
+	firstnames = input("Enter your first name(s):  ")
+	fullname = input("Enter your full name and title(s):  ")
+	print("\nNow your birth date, in the format 'DD/MM/YYYY'.")
+	birthday = input("Enter your birth date:  ")
+	birthday-date = datetime.datetime.strptime(birthday, '%d/%m/%Y')
+	print('\nNow your gender (one single letter).')
+	gender = input('Enter your gender:  ')[0].upper()
+	print('\nNow your nationality, a 3-letter code.')
+	nationality = input('Enter your nationality:  ')[:3].upper()
+	print('\nAnd finally: enter the path to the picture\nthat will be displayed on the passport.')
+	picture = input("Enter the path to the picture:  ")
+	
 	
 
