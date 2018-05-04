@@ -1,5 +1,8 @@
 png/*
 html/*
 pdf/*
+identities/*
 pages.mk
 cover.mk
+!identities/blank.json
+!identities/null.json
