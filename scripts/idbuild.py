@@ -193,11 +193,12 @@ def buildpassport(number = None, issuedate = None, expiredate = None):
 		'number' : number
 	}
 
-def cliBuilder():
+def cliBuilder(target):
 	print("Identity File Builder for Clubelek Passport generation")
 	print("This program will guide you to create a personnalization file\nfor your Clubelek passport.\n")
 	print("You will have to type in a lot of stuff, and you better get it right")
 	print("because otherwise the program will crash and you'll have to start again.\n")
+	print("We'll create the file: %s\n" % target)
 	print("First: the passport number. It's a 9 characters numbers\nmade of letters and digits.")
 	number = input("Enter your desired passport number:  ").upper()
 	if number and not re.match("^[0-9A-Z]{9}$", number):
@@ -212,13 +213,64 @@ def cliBuilder():
 	fullname = input("Enter your full name and title(s):  ")
 	print("\nNow your birth date, in the format 'DD/MM/YYYY'.")
 	birthday = input("Enter your birth date:  ")
-	birthday-date = datetime.datetime.strptime(birthday, '%d/%m/%Y')
+	birthday_date = datetime.datetime.strptime(birthday, '%d/%m/%Y')
 	print('\nNow your gender (one single letter).')
 	gender = input('Enter your gender:  ')[0].upper()
 	print('\nNow your nationality, a 3-letter code.')
 	nationality = input('Enter your nationality:  ')[:3].upper()
 	print('\nAnd finally: enter the path to the picture\nthat will be displayed on the passport.')
 	picture = input("Enter the path to the picture:  ")
+	print("\nOne last thing before we part, but it's optional:")
+	print("I need to know wich for of your name you want in the machine readable zone.")
+	print("It can be any of the following:")
+	print("\t1 - Your family name first, then your first name(s). That's the default.")
+	print("\t2 - Your first name(s) first, then your family name.")
+	print("\t3 - Only your first name(s).")
+	print("\t4 - Only your family name.")
+	print("\t5 - Your full name.")
+	print("\t6 - Your full name, in which the first comma+space indicates the separation")
+	print("\t    between the primary part and the secondary part.")
+	print("\t  - Enter anything else to customize it. Use an octothorp ('#')")
+	print("\t    to separate the primary and secondary part.")
+	print("\t  - Leave it empty to use the default.")
+	sch = input("Enter the way your name should be displayed in the MRZ:  ")
+	mrzname = ''
+	if not sch:
+		scheme = 'famfirst'
+	elif sch not in ['0', '1', '2', '3', '4', '5']:
+		mrzname = sch
+		scheme = 'mrz'
+	else:
+		scheme = {
+			'1' : 'famfirst',
+			'2' : 'firstfam',
+			'3' : 'first',
+			'4' : 'fam',
+			'5' : 'full',
+			'6' : 'fullcomma',
+		}[sch]
+	person = {
+		'fullname' : fullname,
+		'name' : name,
+		'firstnames' : firstnames,
+		'nationality' : nationality,
+		'birthday-date' : birthday_date,
+		'birthday' : birthday_date.strftime(PASSPORT_DATE_FORMAT),
+		'gender' : gender,
+		'mrzname' : mrzname,
+	}
+	passport = buildpassport(number, date.date.today())
+	data = {
+		'MRZ' : buildMRZ(passport, person, scheme),
+		'picture' : getimgdata(picture),
+	}
+	del person['birthday-date']
+	del person['mrzname']
+	del passport['expiry-date']
+	del passport['issuance-date']
+	data['person'] = person
+	data['passport'] = passport
+	return data
 	
 	
 
