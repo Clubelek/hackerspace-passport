@@ -1,5 +1,11 @@
 image: neshiraini/docbuild
-   
+
+before-script:
+  - mkdir -p ~/.fonts
+  - cp resources/OCRB.otf ~/.fonts/OCRB.otf
+  - cp resources/MTCORSIVA.TTF ~/.fonts/MTCORSIVA.TTF
+  - fc-cache -f -v
+
 build:
   stage: build
   script:
