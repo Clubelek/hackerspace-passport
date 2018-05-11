@@ -142,7 +142,23 @@ After the quote, we have a request for hospitality. That's something often found
 either that or a promise of protection. We can't do much in term of protection,
 and it's not very much in the spirit of hackerspaces anyway, so a request for hospitality will do.
 
-> *Placeholder for inner pages*
+Next is the first actual page. It's a bit like those books the just have a repeat
+of the front cover on the first page. Just to let you remember what you are reading.
+In our case, this page also lets you know *what* Clubelek is, and how to contact us
+(there's our [website](https://clubelek.fr) and [chat](https://chat.clubelek.fr) addresses).
+Normally on French passports it's written in 11 different languages,
+but the Clubelek is not a UE member nation (yet).
+
+For the identity page, I inspired myself a lot from the examples of ICAO 9303.
+Especially, the dimensions of the MRZ *are* ICAO compliant. Provided that
+the ID file contains a compliant dataset, the ID page is fully compliant.
+
+The signature page is a bit special: In the Clubelek, each member has a stamp
+to mark things as approved or done. This stamp appears on the passport as well.
+Next to the stamps and signature, there a few words explaining the reasons
+of the passport's existence.
+
+And well, about the visa pages: do I really have to say something about an empty page?
 
 The last page has legal disclaimers, both so we don't have too much trouble with the law
 (imitating an official document and all that), and to mimic the actual disclaimers
