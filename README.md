@@ -32,9 +32,9 @@ You will need:
 > 
 > Fonts required:
 > 
-> -`DejaVu Sans`
-> -`DejaVu Sans Mono`
-> -`DejaVu Serif`
+> - `DejaVu Sans`
+> - `DejaVu Sans Mono`
+> - `DejaVu Serif`
 > - [`Monotype Corsiva`](/resources/MTCORSVA.TTF)
 > - [`OCRB`](/resources/OCRB.otf)
 
@@ -123,6 +123,7 @@ to a real passport. My first source of inspiration was
 I also took some information (especially regarding the positions of elements
 on the ID page) from [ICAO Doc 9303](https://www.icao.int/publications/pages/publication.aspx?docnum=9303),
 the one that contains the full specification for international passports.
+Lastly I also copied a bit from my own passport.
 
 First off, the size is the standard TD3 size (height of 125mm and width of 88mm).
 It is the same size as regular passports.
