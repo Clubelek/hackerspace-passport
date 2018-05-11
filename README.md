@@ -19,6 +19,43 @@ You will need:
  - Some glue that can stick to the materials you're printing on.
  - Something to bind the passport: staples, string, wire...
 
+> Linux packages required:
+> 
+> - `make`
+> - `python3`
+> - `poppler-utils`
+> - `firefox`
+> - `imagemagick`
+> 
+> Python packages required:
+> None, except `Pillow` for `idbuild.py` which is optional anyway.
+> 
+> Fonts required:
+> 
+> -`DejaVu Sans`
+> -`DejaVu Sans Mono`
+> -`DejaVu Serif`
+> - [`Monotype Corsiva`](/resources/MTCORSVA.TTF)
+> - [`OCRB`](/resources/OCRB.otf)
+
+### Step 0 (optional): Creating the customization file
+
+A customization file is a JSON file that contains what will appear
+on the identity page of the passport.
+One version of the passport's inner pages will be generated per identity file.
+
+The files are located in the [`identities`](/identities) folder. To create yours,
+you can take example on `null.json` and  `blank.json`. Make sure the file name
+only contains letters and digits.
+
+Alternately, you can use the script [`idbuild.py`](/scripts/idbuild.py)
+to generate the identity file. It requires `Pillow` to be installed.
+Its is especially useful to generate the MRZ data and a random passport number.
+
+```bash
+python3 scripts/idbuild.py identities/<ID file name>.json
+```
+
 ### Step 1: Creating the PDF files
 
 As easy as a `make`.
@@ -33,39 +70,35 @@ Then open a terminal, `git clone` this repo and run `make` in the cloned directo
 
 Your Git might be pissed off if you don't have [Git LFS](https://git-lfs.github.com/)
 installed, but you don't need it to get the files used by the build scripts.
+The only thing you might want that requires Git LFS is to download the font files,
+but you can download them from the online repo anyway.
 
-> All-in-one build script for Debianoïds:
+> TL;DR, after installing the prerequisites this step should be like:
 >```bash
-# The following lines are only to install git-lfs, from https://github.com/git-lfs/git-lfs/blob/master/INSTALLING.md
-# Don't run them if you already have it, or already have the fonts installed.
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-sudo apt-get update && sudo apt-get install git git-lfs
-git lfs install
-# Now we create the passport
-sudo apt-get install make python3 poppler-utils firefox imagemagick
 git clone https://git.heptacle.fr/clubelek-asso/hackerspace-passport.git
 cd hackerspace-passport
-mkdir -p ~/.fonts && cp resources/MTCORSVA.TTF resources/OCRB.otf ~/.fonts && fc-cache -f -v
 make
 ```
 
 ### Step 2: Printing
 
-There are 2 files to print: `full_cover.pdf` and `passport.pdf`.
+There are 2 files to print: `full_cover.pdf` and `passport_<ID file name>.pdf`.
+If you didn't create a customization file, you'll want `passport_blank.pdf`,
+as all fields on the ID page are left empty and can be filled by hand.
 
 `full_cover.pdf` is the outer cover, to be printed on a tough material
 (something plastic-like is recommended). If you don't have any you can print
 on paper instead.
 
-`passport.pdf` is the inside, to be printed on paper. Thick paper is recommended,
+`passport_*.pdf` is the inside, to be printed on paper. Thick paper is recommended,
 but you can print on regular paper as well. Print on both sides,
 and make sure the crop marks are aligned.
 
 Once all is printed, cut the cover along the crop marks. Don't cut the inner pages yet.
 
-> Alternately, you can replace the first page of `passport.pdf` by the one from
+> Alternately, you can replace the first page of `passport_*.pdf` by the one from
 > `full_cover.pdf`. Print it on the front side of the paper,
-> then continue by printing the second page of `passport.pdf` on the rear side.
+> then continue by printing the second page of `passport_*.pdf` on the rear side.
 > This way, you won't have to glue the outer cover to the passport.
 
 ### Step 3: Binding
