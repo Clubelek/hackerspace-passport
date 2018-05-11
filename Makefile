@@ -13,6 +13,10 @@ TMPDIR=templates
 PDFDIR=pdf
 IDDIR=identities
 
+ifndef COLOR_PROFILE
+COLOR_PROFILE=USWebCoatedSWOP
+endif
+
 all: $(PDFDIR)/full_cover.pdf $(patsubst $(IDDIR)/%.json,$(PDFDIR)/passport_%.pdf,$(wildcard $(IDDIR)/*.json))
 
 include cover.mk
@@ -23,7 +27,7 @@ $(PDFDIR)/passport_%.pdf : $(PDFDIR)/cover.pdf $(PDFDIR)/pages_%.pdf
 
 $(PDFDIR)/%.pdf : $(PNGDIR)/%.png
 	@test -d $$(dirname $@) || mkdir -p $$(dirname $@)
-	$(IMM) -density 254 -units pixelsperinch $< $@
+	$(IMM) -density 254 -units pixelsperinch $< -profile resources/sRGB.icc -profile resources/$(COLOR_PROFILE).icc $@
 
 $(PNGDIR)/%.png : $(HTMDIR)/%.html
 	@test -d $$(dirname $@) || mkdir -p $$(dirname $@)
