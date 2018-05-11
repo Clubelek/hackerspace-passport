@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="1250" viewBox="0 0 880 1250" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="1250" viewBox="-20 -20 900 1290" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<g id='mrz'>
 		<rect x='-20' y='-20' width='252' height='1290' fill='#ffffff'/>
 		<text x='0' y='0' font-size='43' font-family='OCRB' textLength='1140' fill='#000000' transform='translate(136,60)rotate(90)'>{MRZ[TOP]}</text>

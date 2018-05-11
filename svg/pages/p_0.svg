@@ -13,7 +13,7 @@
    version="1.1"
    id="svg2"
    sodipodi:docname="p_0.svg"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -41,9 +41,9 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.53400704"
-     inkscape:cx="297.57137"
+     inkscape:cx="-44.184424"
      inkscape:cy="704.66446"
-     inkscape:window-x="-8"
+     inkscape:window-x="1592"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
@@ -284,47 +284,47 @@
        style="font-size:96px;text-align:center;text-anchor:middle">Clubelek</tspan></text>
   <g
      id="g105"
-     transform="translate(3.7198195e-6,-104)">
+     transform="translate(-0.22265625,-79.411621)">
     <text
        id="text59"
-       y="592.41272"
+       y="546.41272"
        x="441.11328"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:0.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         style="line-height:1.25"
-         y="592.41272"
+         style="font-size:32px;line-height:1.25"
+         y="546.41272"
          x="441.11328"
          id="tspan57"
          sodipodi:role="line">Association de mécatronique</tspan><tspan
          id="tspan63"
-         style="line-height:1.25"
-         y="642.41272"
+         style="font-size:32px;line-height:1.25"
+         y="586.41272"
          x="441.11328"
          sodipodi:role="line">de l'INSA Lyon</tspan><tspan
-         style="line-height:1.25"
+         style="font-size:32px;line-height:1.25"
          id="tspan61"
-         y="672.41272"
+         y="613.49084"
          x="441.11328"
          sodipodi:role="line" /></text>
     <text
        id="text59-5"
-       y="726.4458"
+       y="644.4458"
        x="441.5918"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:0.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic'"
-         y="726.4458"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic'"
+         y="644.4458"
          x="441.5918"
          id="tspan57-1"
          sodipodi:role="line">Mechatronics student club</tspan><tspan
          id="tspan63-8"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic'"
-         y="776.4458"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic'"
+         y="684.4458"
          x="441.5918"
          sodipodi:role="line">of INSA Lyon</tspan><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic'"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic'"
          id="tspan61-6"
-         y="806.4458"
+         y="711.52393"
          x="441.5918"
          sodipodi:role="line" /></text>
   </g>
@@ -349,20 +349,29 @@
        y="1191.8312"
        style="font-size:32px;line-height:1.25"
        id="tspan93">https://chat.clubelek.fr</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:0.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     x="439.82812"
-     y="841.31384"
-     id="text53-7"><tspan
-       sodipodi:role="line"
-       id="tspan51-5"
+  <g
+     id="g901">
+    <text
+       id="text53-7"
+       y="737.31384"
        x="439.82812"
-       y="841.31384"
-       style="font-size:64px;line-height:1.25;text-align:center;text-anchor:middle">Passeport</tspan><tspan
-       sodipodi:role="line"
-       x="439.82812"
-       y="921.31384"
-       style="font-size:64px;line-height:1.25;text-align:center;text-anchor:middle"
-       id="tspan125">Hackerspace</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:0.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan125"
+         style="font-size:53.33333333px;line-height:1.25;text-align:center;text-anchor:middle"
+         y="737.31384"
+         x="439.82812"
+         sodipodi:role="line">Passeport Hackerspace</tspan></text>
+    <text
+       id="text53-7-2"
+       y="808.26184"
+       x="440.45312"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:0.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan125-7"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic';text-align:center;text-anchor:middle"
+         y="808.26184"
+         x="440.45312"
+         sodipodi:role="line">Hackerspace Passport</tspan></text>
+  </g>
 </svg>

@@ -34,9 +34,14 @@
 		</style>
 	</head>
 	<body>
-		<embed type='image/svg+xml' src='{cropmarks[path]}' class="cropmarks"/>
-		<embed type='image/svg+xml' src='{bg[path]}' class="over"/>
-		<embed type='image/svg+xml' src='{left[path]}' class="page-left"/>
-		<embed type='image/svg+xml' src='{right[path]}' class="page-right"/>
+		<embed type='image/svg+xml' src='{cropmarks[path]}' class="cropmarks" id="cropmarks"/>
+		<embed type='image/svg+xml' src='{bg[path]}' class="over" id="over"/>
+		<embed type='image/svg+xml' src='{left[path]}' class="page-left" id="left"/>
+		<embed type='image/svg+xml' src='{right[path]}' class="page-right" id="right"/>
 	</body>
+	<script type='application/javascript'>
+		if ({left[over]}) {{
+			document.getElementById("left").className = "over";
+		}}
+	</script>
 </html>
