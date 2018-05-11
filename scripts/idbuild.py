@@ -6,6 +6,9 @@ import base64
 import secrets
 import string
 import datetime
+import sys
+import os.path
+import json
 
 BASIC_CHARS = string.digits + string.ascii_lowercase
 
@@ -271,6 +274,10 @@ def cliBuilder(target):
 	data['person'] = person
 	data['passport'] = passport
 	return data
-	
-	
+
+if __name__ == "__main__":
+	path = sys.argv[1]
+	data = cliBuilder(path)
+	with open(path, 'w', econding='utf8') as f:
+		json.dump(data, f, indent='\t')
 
