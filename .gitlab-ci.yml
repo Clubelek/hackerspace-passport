@@ -2,7 +2,7 @@ image: neshiraini/docbuild
 
 before_script:
   - git lfs update && git lfs pull
-  - mkdir -p ~/.fonts
+  - mkdir -p ~/.local/share/fonts
   - cp resources/OCRB.otf ~/.local/share/fonts/OCRB.otf
   - cp resources/MTCORSVA.TTF ~/.local/share/fonts/MTCORSVA.ttf
   - chmod -R 755 ~/.local
