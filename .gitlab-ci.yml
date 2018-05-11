@@ -4,7 +4,7 @@ before_script:
   - git lfs update && git lfs pull
   - mkdir -p ~/.local/share/fonts
   - cp resources/OCRB.otf ~/.local/share/fonts/OCRB.otf
-  - cp resources/MTCORSVA.TTF ~/.local/share/fonts/MTCORSVA.ttf
+  - cp resources/MTCORSVA.otf ~/.local/share/fonts/MTCORSVA.otf
   - chmod -R 755 ~/.local
   - chmod 644 ~/.local/share/fonts/*
   - fc-cache -f -v
