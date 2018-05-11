@@ -54,7 +54,7 @@ $(HTMDIR)/cover_%.html : $(SCRDIR)/pager.py $(TMPDIR)/cover_template.html $(SVGD
 	@test -d $$(dirname $@) || mkdir -p $$(dirname $@)
 	$(PY) $^ $@
 
-$(HTMDIR)/cover_0_%.html : $(SCRDIR)/pager.py $(TMPDIR)/cover_template.html $(SVGDIR)/pages/c_0.svg $(SVGDIR)/pages/c_%.svg $(SVGDIR)/blank_cover_background.svg $(SVGDIR)/cropmarks_cover.svg
+$(HTMDIR)/cover_%_0.html : $(SCRDIR)/pager.py $(TMPDIR)/cover_template.html $(SVGDIR)/pages/c_%.svg $(SVGDIR)/pages/c_0.svg $(SVGDIR)/blank_cover_background.svg $(SVGDIR)/cropmarks_cover.svg
 	@test -d $$(dirname $@) || mkdir -p $$(dirname $@)
 	$(PY) $^ $@
 

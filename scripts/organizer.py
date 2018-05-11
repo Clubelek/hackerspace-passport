@@ -62,6 +62,8 @@ def makedeps(pagelist):
 		right = None if pagecount - (i+1-(pagecount%2)) >= pagecount else pagecount - (i+1-(pagecount%2))
 		if left is not None and right is not None and lst[left]['type'] != lst[right]['type']:
 			raise ValueError("Pages %s and %s should be matched but have different type" % (lst[left]['path'], lst[right]['path']))
+		if i % 2 == 0:
+			left, right = right, left
 		result.append('$(PDFDIR)/' + lst[left]['type'] + '_' + ('n' if left is None else lst[left]['suffix']) + '_' + ('n' if right is None else lst[right]['suffix']) + '.pdf')
 	return result
 
