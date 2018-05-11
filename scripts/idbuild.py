@@ -132,7 +132,7 @@ def mrzescape(s):
 	s = s.upper()
 	for i, c in enumerate(s):
 		if c in MRZ_DOUBLE_TABLE and i != 0:
-			r.write(MRZ_REPLACE_TABLE.get(s[i-1], '')
+			r.write(MRZ_REPLACE_TABLE.get(s[i-1], ''))
 		else:
 			r.write(MRZ_REPLACE_TABLE.get(c, ''))
 	return r.getValue()
