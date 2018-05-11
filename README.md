@@ -35,8 +35,22 @@ but not high skill or expensive tools.
 > - `DejaVu Sans`
 > - `DejaVu Sans Mono`
 > - `DejaVu Serif`
-> - [`Monotype Corsiva`](/resources/MTCORSVA.TTF)
+> - [`Monotype Corsiva`](/resources/MTCORSVA.otf)
 > - [`OCRB`](/resources/OCRB.otf)
+> 
+> TL;DR All-in-one installation script for Ubuntu & Debianoids:
+> 
+> ```bash
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git git-lfs make python3 python3-pip poppler-utils firefox imagemagick
+sudo -H pip3 install Pillow
+git clone https://git.heptacle.fr/clubelek-asso/hackerspace-passport.git
+cd hackerspace-passport
+git lfs update && git lfs pull
+mkdir -p ~/.local/share/fonts
+cp resources/MTCORSVA.otf resources/OCRB.otf ~/.local/share/fonts
+fc-cache -f -v
+```
 
 ### Step 0 (optional): Creating the customization file
 
@@ -63,20 +77,19 @@ As easy as a `make`.
 All you need is a Linux computer with `make`, `python3`, `poppler-utils`,
 `firefox` and `imagemagick` installed. You will also need the fonts `DejaVu Sans`
 and `DejaVu Serif` which are installed by default on most computers,
-and [`Monotype Corsiva`](/resources/MTCORSVA.TTF) and [`OCRB`](/resources/OCRB.otf)
+and [`Monotype Corsiva`](/resources/MTCORSVA.otf) and [`OCRB`](/resources/OCRB.otf)
 which are in the [`resources`](/resources) folder.
 
 Then open a terminal, `git clone` this repo and run `make` in the cloned directory.
 
-Your Git might be pissed off if you don't have [Git LFS](https://git-lfs.github.com/)
-installed, but you don't need it to get the files used by the build scripts.
-The only thing you might want that requires Git LFS is to download the font files,
-but you can download them from the online repo anyway.
+You will need Git LFS because the conversion to PDF files uses color profile files
+that are stored in the repo using LFS.
 
 > TL;DR, after installing the prerequisites this step should be like:
 >```bash
 git clone https://git.heptacle.fr/clubelek-asso/hackerspace-passport.git
 cd hackerspace-passport
+git lfs update && git lfs pull
 make
 ```
 
