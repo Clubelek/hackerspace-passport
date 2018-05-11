@@ -1,6 +1,6 @@
 image: neshiraini/docbuild
 
-before-script:
+before_script:
   - mkdir -p ~/.fonts
   - cp resources/OCRB.otf ~/.fonts/OCRB.otf
   - cp resources/MTCORSIVA.TTF ~/.fonts/MTCORSIVA.TTF
