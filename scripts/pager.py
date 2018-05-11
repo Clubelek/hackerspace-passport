@@ -4,11 +4,12 @@ import os.path
 template = sys.argv[1]
 left = {
 	"path" : os.path.abspath(sys.argv[2]),
-	"number" : os.path.splitext(os.path.basename(sys.argv[2]))[0].split('_')[-1]
+	"over" : str(os.path.splitext(os.path.basename(sys.argv[2]))[0].split('_')[-1].endswith('-1')).lower(),
+	"number" : os.path.splitext(os.path.basename(sys.argv[2]))[0].split('_')[-1],
 }
 right = {
 	"path" : os.path.abspath(sys.argv[3]),
-	"number" : os.path.splitext(os.path.basename(sys.argv[3]))[0].split('_')[-1]
+	"number" : os.path.splitext(os.path.basename(sys.argv[3]))[0].split('_')[-1],
 }
 bg = {
 	"path" : os.path.abspath(sys.argv[4]),
