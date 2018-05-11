@@ -3,7 +3,7 @@ image: neshiraini/docbuild
 before_script:
   - mkdir -p ~/.fonts
   - cp resources/OCRB.otf ~/.fonts/OCRB.otf
-  - cp resources/MTCORSIVA.TTF ~/.fonts/MTCORSIVA.TTF
+  - cp resources/MTCORSVA.TTF ~/.fonts/MTCORSVA.TTF
   - fc-cache -f -v
 
 build:
