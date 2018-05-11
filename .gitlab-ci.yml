@@ -1,0 +1,10 @@
+image: neshiraini/docbuild
+   
+build:
+  stage: build
+  script:
+    - make
+  artifacts:
+    name: "passports"
+    paths:
+      - pdf/*
