@@ -11,14 +11,14 @@ as well as some design choices.
 The passport has been designed to be relatively easy to make. It does require some work,
 but not high skill or expensive tools.
 
-You will need:
-
- - A computer running Linux. This has been tested on WSL, so any distribution
-   should work fine.
- - A printer. Just a regular, 2D printer that prints on paper.
- - Some glue that can stick to the materials you're printing on.
- - Something to bind the passport: staples, string, wire...
-
+> You will need:
+>
+> - A computer running Linux. This has been tested on WSL, so any distribution
+>   should work fine.
+> - A printer. Just a regular, 2D printer that prints on paper.
+> - Some glue that can stick to the materials you're printing on.
+> - Something to bind the passport: staples, string, wire...
+>
 > Linux packages required:
 > 
 > - `make`
