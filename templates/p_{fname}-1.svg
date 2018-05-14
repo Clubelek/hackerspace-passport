@@ -22,19 +22,20 @@
 	<g id='z2' transform='translate(680,400)rotate(90)'>
 		<text x='0' y='0' font-size='20' font-family='DejaVu Serif'>Nom et titre complets / <tspan font-style='italic'>Full name and title</tspan></text>
 		<text x='20' y='35' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[fullname]}</text>
-		<text x='0' y='80' font-size='20' font-family='DejaVu Serif'>Nom / <tspan font-style='italic'>Name</tspan></text>
-		<text x='20' y='115' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[name]}</text>
-		<text x='500' y='80' font-size='20' font-family='DejaVu Serif'>Nationalité / <tspan font-style='italic'>Nationality</tspan></text>
-		<text x='520' y='115' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[nationality]}</text>
-		<text x='0' y='160' font-size='20' font-family='DejaVu Serif'>Prénom(s) / <tspan font-style='italic'>First name(s)</tspan></text>
-		<text x='20' y='195' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[firstnames]}</text>
-		<text x='600' y='160' font-size='20' font-family='DejaVu Serif'>Genre / <tspan font-style='italic'>Gender</tspan></text>
-		<text x='620' y='195' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[gender]}</text>
-		<text x='0' y='240' font-size='20' font-family='DejaVu Serif'>Date de naissance / <tspan font-style='italic'>Date of birth</tspan></text>
-		<text x='20' y='275' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[birthday]}</text>
-		<text x='400' y='240' font-size='20' font-family='DejaVu Serif'>Date d'émission / <tspan font-style='italic'>Date of issuance</tspan></text>
-		<text x='420' y='275' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{passport[issuance]}</text>
-		<text x='0' y='320' font-size='20' font-family='DejaVu Serif'>Autorité émettrice / <tspan font-style='italic'>Issuing authority</tspan></text>
-		<text x='20' y='355' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>BUREAU DU CLUBELEK / CLUBELEK ADMIN BOARD</text>
+		<text x='20' y='65' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[fullname2]}</text>
+		<text x='0' y='110' font-size='20' font-family='DejaVu Serif'>Nom / <tspan font-style='italic'>Name</tspan></text>
+		<text x='20' y='145' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[name]}</text>
+		<text x='500' y='110' font-size='20' font-family='DejaVu Serif'>Nationalité / <tspan font-style='italic'>Nationality</tspan></text>
+		<text x='520' y='145' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[nationality]}</text>
+		<text x='0' y='190' font-size='20' font-family='DejaVu Serif'>Prénom(s) / <tspan font-style='italic'>First name(s)</tspan></text>
+		<text x='20' y='225' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[firstnames]}</text>
+		<text x='600' y='190' font-size='20' font-family='DejaVu Serif'>Genre / <tspan font-style='italic'>Gender</tspan></text>
+		<text x='620' y='225' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[gender]}</text>
+		<text x='0' y='270' font-size='20' font-family='DejaVu Serif'>Date de naissance / <tspan font-style='italic'>Date of birth</tspan></text>
+		<text x='20' y='305' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{person[birthday]}</text>
+		<text x='400' y='270' font-size='20' font-family='DejaVu Serif'>Date d'émission / <tspan font-style='italic'>Date of issuance</tspan></text>
+		<text x='420' y='305' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>{passport[issuance]}</text>
+		<text x='0' y='350' font-size='20' font-family='DejaVu Serif'>Autorité émettrice / <tspan font-style='italic'>Issuing authority</tspan></text>
+		<text x='20' y='385' font-size='30' font-family='DejaVu Sans Mono' font-weight='bold'>BUREAU DU CLUBELEK / CLUBELEK ADMIN BOARD</text>
 	</g>
 </svg>

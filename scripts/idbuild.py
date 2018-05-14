@@ -9,6 +9,7 @@ import datetime
 import sys
 import os.path
 import json
+import textwrap
 
 BASIC_CHARS = string.digits + string.ascii_lowercase
 
@@ -271,6 +272,8 @@ def cliBuilder(target):
 	del person['mrzname']
 	del passport['expiry-date']
 	del passport['issuance-date']
+	person['fullname'] = textwrap.wrap(fullname, width=30)[0]
+	person['fullname2'] = textwrap.wrap(fullname, width=30)[1]
 	data['person'] = person
 	data['passport'] = passport
 	return data
