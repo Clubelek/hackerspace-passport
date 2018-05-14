@@ -272,8 +272,10 @@ def cliBuilder(target):
 	del person['mrzname']
 	del passport['expiry-date']
 	del passport['issuance-date']
-	person['fullname'] = textwrap.wrap(fullname, width=30)[0]
-	person['fullname2'] = textwrap.wrap(fullname, width=30)[1]
+	person['fullname'] = textwrap.wrap(fullname, width=40)[0]
+	person['fullname2'] = textwrap.wrap(fullname, width=40)[1]
+	person['name'] = textwrap.wrap(name, width=25)[0]
+	person['firstnames'] = textwrap.wrap(firstnames, width=30)[0]
 	data['person'] = person
 	data['passport'] = passport
 	return data
