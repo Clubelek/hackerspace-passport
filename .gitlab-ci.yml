@@ -1,4 +1,4 @@
-image: neshiraini/docbuild
+image: $CI_REGISTRY/docker/docbuild
 
 before_script:
   - git lfs update && git lfs pull
