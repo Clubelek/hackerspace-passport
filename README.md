@@ -9,12 +9,14 @@ as well as some design choices.
 ## Making
 
 The passport has been designed to be relatively easy to make. It does require some work,
-but not high skill or expensive tools.
+but not high skill or expensive tools. If you're too lazy to read the instructions,
+you don't deserve to be called a maker.
 
 > You will need:
 >
-> - A computer running Linux. This has been tested on WSL, so any distribution
+> - A computer running Linux. It has been tested on WSL, so any distribution
 >   should work fine.
+> - Git and [Git LFS](https://git-lfs.github.com/)
 > - A printer. Just a regular, 2D printer that prints on paper.
 > - Some glue that can stick to the materials you're printing on.
 > - Something to bind the passport: staples, string, wire...
@@ -65,7 +67,7 @@ only contains letters and digits.
 
 Alternately, you can use the script [`idbuild.py`](/scripts/idbuild.py)
 to generate the identity file. It requires `Pillow` to be installed.
-Its is especially useful to generate the MRZ data and a random passport number.
+Its is especially useful to generate the image URL and the MRZ data.
 
 ```bash
 python3 scripts/idbuild.py identities/<ID file name>.json
@@ -81,7 +83,8 @@ and `DejaVu Serif` which are installed by default on most computers,
 and [`Monotype Corsiva`](/resources/MTCORSVA.otf) and [`OCRB`](/resources/OCRB.otf)
 which are in the [`resources`](/resources) folder.
 
-Then open a terminal, `git clone` this repo and run `make` in the cloned directory.
+Then open a terminal, `git clone` this repo and run `make` in the cloned directory
+(don't clone if you have already cloned in step 0 or to install the fonts).
 
 You will need Git LFS because the conversion to PDF files uses color profile files
 that are stored in the repo using LFS.
