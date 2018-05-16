@@ -40,7 +40,8 @@ but not high skill or expensive tools.
 > 
 > TL;DR All-in-one installation script for Ubuntu & Debianoids:
 > 
-> ```bash
+> 
+```bash
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git git-lfs make python3 python3-pip poppler-utils firefox imagemagick
 sudo -H pip3 install Pillow
@@ -86,7 +87,7 @@ You will need Git LFS because the conversion to PDF files uses color profile fil
 that are stored in the repo using LFS.
 
 > TL;DR, after installing the prerequisites this step should be like:
->```bash
+```bash
 git clone https://git.heptacle.fr/clubelek-asso/hackerspace-passport.git
 cd hackerspace-passport
 git lfs update && git lfs pull
